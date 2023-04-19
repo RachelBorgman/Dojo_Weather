@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+    </style>
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div id="nav-content">
+                <h1>DojoWeather</h1>
+                <ul>
+                    <li><button onclick="myAlert()">Burbank</button></li>
+                    <li><button onclick="myAlert()">Chicago</button></li>
+                    <li><button onclick="myAlert()">Dallas</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="header">
+                <h2>San Jose</h2>
+                <form>
+                    <label for="degrees">show temperature in </label>
+                    <select name="degrees" id="degrees" onchange="changeUnits()">
+                        <option value="c">°C</option>
+                        <option value="f">°F</option>
+                    </select>
+                </form>
+            </div>
+            <div id="page">
+                <div id="week_outlook">
+                    <div class="day">
+                        <h3 class="day_name">Today</h3>
+                        <img src="./assets/some_rain.png" alt="some rain icon">
+                        <p class="outlook_description">some rain</p>
+                        <div class="daily_temps">
+                            <h4 class="temperature_high"><span id="temp_1">24</span>°</h4>
+                            <h4 class="temperature_low"><span id="temp_2">18</span>°</h4>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3 class="day_name">Tomorrow</h3>
+                        <img src="./assets/some_sun.png" alt="some sun icon">
+                        <p class="outlook_description">some sun</p>
+                        <div class="daily_temps">
+                            <h4 class="temperature_high"><span id="temp_3">27</span>°</h4>
+                            <h4 class="temperature_low"><span id="temp_4">19</span>°</h4>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3 class="day_name">Friday</h3>
+                        <img src="./assets/some_clouds.png" alt="some clouds icon">
+                        <p class="outlook_description">some clouds</p>
+                        <div class="daily_temps">
+                            <h4 class="temperature_high"><span id="temp_5">21</span>°</h4>
+                            <h4 class="temperature_low"><span id="temp_6">16</span>°</h4>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <h3 class="day_name">Saturday</h3>
+                        <img src="./assets/some_sun.png" alt="some sun icon">
+                        <p class="outlook_description">some sun</p>
+                        <div class="daily_temps">
+                            <h4 class="temperature_high"><span id="temp_7">26</span>°</h4>
+                            <h4 class="temperature_low"><span id="temp_8">21</span>°</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="cookie_box">
+                    <h4>Stop! Cookie time</h4>
+                    <div class="cookie_content">
+                        <img src="./assets/cookie.png" alt="cookie pic">
+                        <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+                        <button onclick="hide()">I Accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
